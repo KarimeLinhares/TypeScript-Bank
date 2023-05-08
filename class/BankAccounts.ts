@@ -1,5 +1,5 @@
 export abstract class BankAccounts {
-	private name: string;
+	private readonly name: string;
 	private readonly accountNumber: number;
 	private balance: number = 0;
 	private status: boolean = true;
@@ -10,11 +10,6 @@ export abstract class BankAccounts {
 	}
 
 	//name
-	setName = (name: string): void => {
-		this.name = name;
-		console.log('Nome alterado com sucesso!');
-	};
-
 	getName = (): string => {
 		return this.name;
 	};
